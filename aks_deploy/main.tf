@@ -2,10 +2,10 @@
 terraform {
   required_version = ">= 1.3"
   backend "azurerm" {
-    resource_group_name  = __RG__
-    storage_account_name = __STA__
-    container_name       = __CONTAINER__
-    key                  = __TFSTATE__
+    resource_group_name  = "__RG__"
+    storage_account_name = "__STA__"
+    container_name       = "__CONTAINER__"
+    key                  = "__TFSTATE__"
   }
 
   required_providers {
