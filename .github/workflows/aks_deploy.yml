@@ -20,6 +20,12 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    env:
+      ARM_CLIENT_ID: ${{ secrets.CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.TENANT_ID }}
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -41,10 +47,6 @@ jobs:
           STA: 'troystawest001'
           CONTAINER: 'tfstate'
           TFSTATE: 'aks.tfstate'
-          APPID: '${{secrets.CLIENT_ID}}'
-          CLIENT_SECRET: '${{secrets.CLIENT_SECRET}}'
-          TENANT: '${{secrets.TENANT_ID}}'
-          SUBSCRIPTION_ID: '${{secrets.SUBSCRIPTION_ID}}'
 
       #Run terraform init
       - name: Terraform init
