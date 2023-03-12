@@ -43,7 +43,7 @@ jobs:
           TFSTATE: 'aks.tfstate'
           APPID: '${{secrets.CLIENT_ID}}'
           CLIENT_SECRET: '${{secrets.CLIENT_SECRET}}'
-          TENANT: '${{secrets.TENANT}}'
+          TENANT: '${{secrets.TENANT_ID}}'
           SUBSCRIPTION_ID: '${{secrets.SUBSCRIPTION_ID}}'
 
       #Run terraform init
