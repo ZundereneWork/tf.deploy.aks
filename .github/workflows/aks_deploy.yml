@@ -43,6 +43,6 @@ jobs:
           TFSTATE: "aks"
 
 
-      # Run terraform init
-      #- name: Terraform init
-      #  run: terraform init
+      #Run terraform init
+      - name: Terraform init
+        run: terraform init
