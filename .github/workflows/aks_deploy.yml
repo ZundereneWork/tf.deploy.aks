@@ -35,7 +35,7 @@ jobs:
         with:
           tokenPrefix: '__'
           tokenSuffix: '__'
-          files: '["main.tf"]'
+          files: '["./aks_deploy/main.tf"]'
         env:
           RG: "troyrgwest001"
           STA: "troystawest001"
