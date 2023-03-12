@@ -45,4 +45,6 @@ jobs:
 
       #Run terraform init
       - name: Terraform init
-        run: terraform init -no-color  -reconfigure
+        run: | 
+          cd aks_deploy 
+          terraform init -no-color  -reconfigure
