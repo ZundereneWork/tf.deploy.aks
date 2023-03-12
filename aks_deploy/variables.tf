@@ -8,7 +8,7 @@ variable "loc" {
   type        = string
 }
 
-variable "count" {
+variable "cont" {
   description = "Count of the virtual network"
   type        = number
 }
