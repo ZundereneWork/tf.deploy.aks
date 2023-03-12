@@ -22,7 +22,7 @@ provider "azurerm" {
 
 
 module "Vnet" {
-    source = "git::https://github.com/ZundereneWork/tf.modules.git//Aks"
+    source = "git::https://github.com/ZundereneWork/tf.modules.git//Vnet"
 
     name                = var.name
     loc                 = var.loc
