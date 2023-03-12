@@ -26,7 +26,7 @@ module "Vnet" {
 
     name                = var.name
     loc                 = var.loc
-    count               = var.count 
+    cont                = var.cont 
     aks_network_cidr    = var.aks_network_cidr
     location            = var.location
     resource_group_name = var.resource_group_name
