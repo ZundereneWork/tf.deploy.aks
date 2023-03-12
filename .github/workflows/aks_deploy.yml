@@ -44,6 +44,7 @@ jobs:
           APPID: '${{secrets.CLIENT_ID}}'
           CLIENT_SECRET: '${{secrets.CLIENT_SECRET}}'
           TENANT: '${{secrets.TENANT}}'
+          SUBSCRIPTION_ID: '${{secrets.SUBSCRIPTION_ID}}'
 
       #Run terraform init
       - name: Terraform init
