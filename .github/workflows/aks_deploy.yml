@@ -37,10 +37,10 @@ jobs:
           tokenSuffix: '__'
           files: '["./aks_deploy/main.tf"]'
         env:
-          RG: "'troyrgwest001'"
-          STA: "'troystawest001'"
-          CONTAINER: "'tfstate'"
-          TFSTATE: "'a'ks.tfstate'"
+          RG: 'troyrgwest001'
+          STA: 'troystawest001'
+          CONTAINER: 'tfstate'
+          TFSTATE: 'aks.tfstate'
 
 
       #Run terraform init
