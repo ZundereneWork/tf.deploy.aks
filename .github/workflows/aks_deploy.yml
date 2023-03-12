@@ -31,6 +31,18 @@ jobs:
         with:
           creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
 
+      - uses: cschleiden/replace-tokens@v1
+        with:
+          tokenPrefix: '__'
+          tokenSuffix: '__'
+          files: '["main.tf"]'
+        env:
+          RG: "troyrgwest001"
+          STA: "troystawest001"
+          CONTAINER: "tfstate"
+          TFSTATE: "aks"
+
+
       # Run terraform init
       #- name: Terraform init
       #  run: terraform init
