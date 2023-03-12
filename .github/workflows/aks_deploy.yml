@@ -53,3 +53,11 @@ jobs:
         run: | 
           cd aks_deploy 
           terraform init -no-color  -reconfigure
+      - name: Terraform  validate
+        run: |
+          cd aks_deploy
+          terraform validate -no-color 
+      - name: Terraform  plan
+        run: |
+          cd aks_deploy
+          terraform plan -no-color  -out='aks.tfstate' -var-file='./aksConfig.tfvars'
