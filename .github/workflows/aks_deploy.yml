@@ -41,7 +41,9 @@ jobs:
           STA: 'troystawest001'
           CONTAINER: 'tfstate'
           TFSTATE: 'aks.tfstate'
-
+          APPID: '${{secrets.CLIENT_ID}}'
+          CLIENT_SECRET: '${{secrets.CLIENT_SECRET}}' 
+          TENANT: '${{secrets.TENANT}}'
 
       #Run terraform init
       - name: Terraform init
