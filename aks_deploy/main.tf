@@ -64,7 +64,6 @@ module "aks" {
   subnet_id           = module.subnet.id
   max_pods            = var.maxNode
   os_disk_size_gb     = var.disk_size_gb
-  agent_subnet_id     = module.subnet.id
   network_plugin      = var.network_plugin
   load_balancer_sku   = var.load_balance_sku
   outbound_type       = var.outbound_type
