@@ -51,7 +51,7 @@ module "subnet" {
 }
 
 module "aks" {
-   depends_on = [module.subnet]
+   depends_on = [module.subnet, data.azurerm_container_registry.skv]
    source = "git::https://github.com/ZundereneWork/tf.modules.git//Aks"
 
   name                = var.name
@@ -66,7 +66,7 @@ module "aks" {
   size                = var.size
   numNodes            = var.numNodes
   type                = var.type
-  subnet_id           = module.subnet.id
+  subnet_id           = module.subnet.subnet_id
   maxNode             = var.maxNode
   disk_size_gb        = var.disk_size_gb
   client_id           = var.client_id
