@@ -1,7 +1,7 @@
 name = "troy"
 loc = "west"
 cont = "001"
-aks_network_cidr = ["10.0.0.0/24"]
+aks_network_cidr = ["10.0.0.0/16"]
 location = "westeurope"
 nameContainerRegistry = "troyrsaweu001"
 resource_group_name = "troyrgwest001"
