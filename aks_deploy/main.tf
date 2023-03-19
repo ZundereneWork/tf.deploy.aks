@@ -60,7 +60,7 @@ module "aks" {
   cont                = var.cont
   resource_group_name = var.resource_group_name
   version_aks         = var.version_aks
-  aks_network_cidr    = var.aks_network_cidr
+  service_cidr        = var.service_cidr
   dns_service_ip      = var.dns_service_ip
   pod_cidr            = var.pod_cidr
   size                = var.size
