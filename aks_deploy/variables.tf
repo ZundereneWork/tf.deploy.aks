@@ -34,11 +34,6 @@ variable "version_aks" {
   description = "The version of Kubernetes to use for the AKS cluster."
 }
 
-variable "service_cidr" {
-  type        = string
-  description = "The CIDR block used for Kubernetes services."
-}
-
 variable "dns_service_ip" {
   type        = string
   description = "The IP address used for Kubernetes DNS services."
