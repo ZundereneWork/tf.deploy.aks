@@ -52,7 +52,8 @@ module "aks" {
    source = "git::https://github.com/ZundereneWork/tf.modules.git//Aks"
 
   name                = var.name
-  location            = var.loc
+  loc                 = var.loc
+  location            = var.location
   cont                = var.cont
   resource_group_name = var.resource_group_name
   version_aks         = var.version_aks
@@ -66,12 +67,12 @@ module "aks" {
   maxNode             = var.maxNode
   disk_size_gb        = var.disk_size_gb
   network_plugin      = var.network_plugin
-  load_balancer_sku   = var.load_balance_sku
+  load_balance_sku   = var.load_balance_sku
   outbound_type       = var.outbound_type
   network_policy      = var.network_policy
-  pod_ip_range        = var.ip_range_pod
+  ip_range_pod        = var.ip_range_pod
   client_id           = var.client_id
   client_secret       = var.client_secret
   azurerm_container_registry_id              = data.azurerm_container_registry.akv.id
-  admin_group_object_ids = var.list_add_group_ids
+  list_add_group_ids = var.list_add_group_ids
 }
