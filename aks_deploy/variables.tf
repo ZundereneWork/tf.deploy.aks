@@ -28,30 +28,6 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "name" {
-  type        = string
-  description = "The name of the AKS cluster."
-}
-
-variable "loc" {
-  type        = string
-  description = "The location where the AKS cluster will be created."
-}
-
-variable "count" {
-  type        = string
-  description = "A count used to generate unique resource names."
-}
-
-variable "location" {
-  type        = string
-  description = "The location where the resource group will be created."
-}
-
-variable "resource_group_name" {
-  type        = string
-  description = "The name of the resource group that the AKS cluster will be created in."
-}
 
 variable "version_aks" {
   type        = string
