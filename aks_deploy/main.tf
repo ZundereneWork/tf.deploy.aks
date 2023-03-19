@@ -70,7 +70,7 @@ module "aks" {
   maxNode             = var.maxNode
   disk_size_gb        = var.disk_size_gb
   network_plugin      = var.network_plugin
-  load_balance_sku   = var.load_balance_sku
+  load_balance_sku    = var.load_balance_sku
   outbound_type       = var.outbound_type
   network_policy      = var.network_policy
   ip_range_pod        = var.ip_range_pod
