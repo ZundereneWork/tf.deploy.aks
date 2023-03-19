@@ -63,8 +63,8 @@ module "aks" {
   numNodes                                    = var.numNodes
   subnet_id                                   = module.subnet.subnet_id
   disk_size_gb                                = var.disk_size_gb
-  client_id                                   = var.client_id
-  client_secret                               = var.client_secret
+  client_id                                   = "__CLIENT_ID_AKS__"
+  client_secret                               = "__CLIENT_SECRET_AKS__"
   azurerm_container_registry_id               = data.azurerm_container_registry.skv.id
   list_add_group_ids                          = var.list_add_group_ids
 }
