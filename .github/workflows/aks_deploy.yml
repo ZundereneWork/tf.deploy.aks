@@ -77,4 +77,4 @@ jobs:
       - name: Terraform  apply
         run: |
           cd aks_deploy
-          terraform apply -no-color  -var-file='./aksConfig.tfvars'
+          terraform apply -no-color --yes  -var-file='./aksConfig.tfvars'
