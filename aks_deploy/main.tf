@@ -54,23 +54,18 @@ module "aks" {
    depends_on = [module.subnet, data.azurerm_container_registry.skv]
    source = "git::https://github.com/ZundereneWork/tf.modules.git//Aks"
 
-  name                = var.name
-  loc                 = var.loc
-  location            = var.location
-  cont                = var.cont
-  resource_group_name = var.resource_group_name
-  version_aks         = var.version_aks
-  service_cidr        = var.service_cidr
-  dns_service_ip      = var.dns_service_ip
-  pod_cidr            = var.pod_cidr
-  size                = var.size
-  numNodes            = var.numNodes
-  type                = var.type
-  subnet_id           = module.subnet.subnet_id
-  maxNode             = var.maxNode
-  disk_size_gb        = var.disk_size_gb
-  client_id           = var.client_id
-  client_secret       = var.client_secret
-  azurerm_container_registry_id              = data.azurerm_container_registry.akv.id
-  list_add_group_ids = var.list_add_group_ids
+  name                                        = var.name
+  loc                                         = var.loc
+  location                                    = var.location
+  cont                                        = var.cont
+  resource_group_name                         = var.resource_group_name
+  version_aks                                 = var.version_aks
+  size                                        = var.size
+  numNodes                                    = var.numNodes
+  subnet_id                                   = module.subnet.subnet_id
+  disk_size_gb                                = var.disk_size_gb
+  client_id                                   = var.client_id
+  client_secret                               = var.client_secret
+  azurerm_container_registry_id               = data.azurerm_container_registry.skv.id
+  list_add_group_ids                          = var.list_add_group_ids
 }
