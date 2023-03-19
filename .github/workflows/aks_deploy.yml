@@ -60,7 +60,6 @@ jobs:
           CLIENT_ID_AKS: '${{secrets.CLIENT_ID_AKS}}'
           CLIENT_SECRET_AKS: '${{env.CLIENT_SECRET_AKS}}'
 
-
       #Run terraform init
       - name: Terraform init
         run: | 
