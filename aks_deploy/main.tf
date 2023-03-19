@@ -69,11 +69,6 @@ module "aks" {
   subnet_id           = module.subnet.id
   maxNode             = var.maxNode
   disk_size_gb        = var.disk_size_gb
-  network_plugin      = var.network_plugin
-  load_balance_sku    = var.load_balance_sku
-  outbound_type       = var.outbound_type
-  network_policy      = var.network_policy
-  ip_range_pod        = var.ip_range_pod
   client_id           = var.client_id
   client_secret       = var.client_secret
   azurerm_container_registry_id              = data.azurerm_container_registry.akv.id
