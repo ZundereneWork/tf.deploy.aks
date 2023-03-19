@@ -45,7 +45,7 @@ module "subnet" {
   loc                 = var.loc 
   cont                = var.cont  
   resource_group_name = var.resource_group_name
-  aks_network_cidr    = var.aks_network_cidr
+  aks_network_cidr    = var.aks_network_sub
   virtual_network_name = "${var.name}-vnet-${var.loc}-${var.cont}"
 
 }
