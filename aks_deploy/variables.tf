@@ -18,11 +18,6 @@ variable "aks_network_cidr" {
   type        = list(string)
 }
 
-variable "service_cidr" {
-  description = "The network range"
-  default = 
-}
-
 variable "location" {
   description = "Location of the resource"
   type        = string
