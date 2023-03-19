@@ -38,7 +38,7 @@ module "Vnet" {
 }
 
 module "subnet" {
-  depend_on = [module.Vnet]
+  depends_on = [module.Vnet]
   source = "git::https://github.com/ZundereneWork/tf.modules.git//Subnet"
 
   name                = var.name
@@ -48,22 +48,23 @@ module "subnet" {
 }
 
 module "aks" {
-   depend_on = [module.subnet]
+   depends_on = [module.subnet]
    source = "git::https://github.com/ZundereneWork/tf.modules.git//Aks"
 
   name                = var.name
   location            = var.loc
+  cont                = var.cont
   resource_group_name = var.resource_group_name
   version_aks         = var.version_aks
   service_cidr        = var.service_cidr
   dns_service_ip      = var.dns_service_ip
   pod_cidr            = var.pod_cidr
   size                = var.size
-  node_count          = var.numNodes
-  vm_type             = var.type
+  numNodes            = var.numNodes
+  type                = var.type
   subnet_id           = module.subnet.id
-  max_pods            = var.maxNode
-  os_disk_size_gb     = var.disk_size_gb
+  maxNode             = var.maxNode
+  disk_size_gb        = var.disk_size_gb
   network_plugin      = var.network_plugin
   load_balancer_sku   = var.load_balance_sku
   outbound_type       = var.outbound_type
@@ -71,6 +72,6 @@ module "aks" {
   pod_ip_range        = var.ip_range_pod
   client_id           = var.client_id
   client_secret       = var.client_secret
-  acr_id              = data.azurerm_container_registry.akv.id
+  azurerm_container_registry_id              = data.azurerm_container_registry.akv.id
   admin_group_object_ids = var.list_add_group_ids
 }
