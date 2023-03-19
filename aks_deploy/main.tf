@@ -44,6 +44,8 @@ module "subnet" {
   name                = var.name
   loc                 = var.loc 
   cont                = var.cont  
+  resource_group_name = var.resource_group_name
+  aks_network_cidr    = var.aks_network_cidr
 
 }
 
