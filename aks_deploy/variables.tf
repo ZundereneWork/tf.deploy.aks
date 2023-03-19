@@ -28,7 +28,7 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "version_aks" {
+variable "kubernetes_version" {
   type = string
 }
 

@@ -59,7 +59,7 @@ module "aks" {
   location                                    = var.location
   cont                                        = var.cont
   resource_group_name                         = var.resource_group_name
-  version_aks                                 = var.version_aks
+  kubernetes_version                          = var.kubernetes_version
   size                                        = var.size
   numNodes                                    = var.numNodes
   subnet_id                                   = module.subnet.subnet_id
