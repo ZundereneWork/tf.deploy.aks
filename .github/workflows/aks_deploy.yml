@@ -74,3 +74,7 @@ jobs:
         run: |
           cd aks_deploy
           terraform plan -no-color  -out='aks.tfstate' -var-file='./aksConfig.tfvars'
+      - name: Terraform  apply
+        run: |
+          cd aks_deploy
+          terraform apply -no-color  -out='aks.tfstate' -var-file='./aksConfig.tfvars'
