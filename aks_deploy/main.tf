@@ -20,6 +20,11 @@ provider "azurerm" {
   features {} 
 }
 
+data "azurerm_container_registry" "skv" {
+  name                = var.nameContainerRegistry
+  resource_group_name = var.resource_group_name
+}
+
 
 module "Vnet" {
   source = "git::https://github.com/ZundereneWork/tf.modules.git//Vnet"
@@ -44,7 +49,7 @@ module "subnet" {
 
 module "aks" {
    depend_on = [module.subnet]
-   source = "git::https://github.com/ZundereneWork/tf.modules.git//aks"
+   source = "git::https://github.com/ZundereneWork/tf.modules.git//Aks"
 
   name                = var.name
   location            = var.loc
@@ -67,6 +72,6 @@ module "aks" {
   pod_ip_range        = var.ip_range_pod
   client_id           = var.client_id
   client_secret       = var.client_secret
-  acr_id              = var.azurerm_container_registry_id
+  acr_id              = data.azurerm_container_registry.akv.id
   admin_group_object_ids = var.list_add_group_ids
 }
