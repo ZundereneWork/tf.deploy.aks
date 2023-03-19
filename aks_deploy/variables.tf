@@ -150,5 +150,5 @@ variable "azurerm_container_registry_id" {
 
 variable "list_add_group_ids" {
   type        = list(string)
-  description = "A list of Azure AD group IDs to add as admins for the AK
+  description = "A list of Azure AD group IDs to add as admins for the AK"
 }
