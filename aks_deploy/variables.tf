@@ -18,6 +18,11 @@ variable "aks_network_cidr" {
   type        = list(string)
 }
 
+variable "aks_network_sub" {
+  description = "CIDR block for the virtual network"
+  type        = string
+}
+
 variable "location" {
   description = "Location of the resource"
   type        = string
