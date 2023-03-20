@@ -4,7 +4,6 @@ cont = "001"
 aks_network_cidr = ["10.1.0.0/16"]
 aks_subnet = ["10.1.0.0/27"]
 location = "westeurope"
-nameContainerRegistry = "troyrsaweu001"
 resource_group_name = "troyrgwest001"
 kubernetes_version = "1.24.9"
 size = "Standard_B2s"

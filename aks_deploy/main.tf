@@ -20,11 +20,6 @@ provider "azurerm" {
   features {} 
 }
 
-data "azurerm_container_registry" "skv" {
-  name                = var.nameContainerRegistry
-  resource_group_name = var.resource_group_name
-}
-
 
 module "Vnet" {
   source = "git::https://github.com/ZundereneWork/tf.modules.git//Vnet"
@@ -65,6 +60,5 @@ module "aks" {
   disk_size_gb                                = var.disk_size_gb
   client_id                                   = var.client_id
   client_secret                               = var.client_secret
-  azurerm_container_registry_id               = data.azurerm_container_registry.skv.id
   list_add_group_ids                          = var.list_add_group_ids
 }
