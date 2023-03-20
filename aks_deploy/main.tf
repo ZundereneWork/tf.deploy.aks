@@ -45,7 +45,7 @@ module "subnet" {
 }
 
 module "aks" {
-   depends_on = [module.subnet, data.azurerm_container_registry.skv]
+   depends_on = [module.subnet]
    source = "git::https://github.com/ZundereneWork/tf.modules.git//Aks"
 
   name                                        = var.name
