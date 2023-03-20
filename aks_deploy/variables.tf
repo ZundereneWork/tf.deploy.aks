@@ -61,7 +61,3 @@ variable "list_add_group_ids" {
   type = list(string)
 }
 
-variable "nameContainerRegistry" {
-  type = string
-  description = ""
-}
