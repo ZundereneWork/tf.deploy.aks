@@ -77,3 +77,7 @@ jobs:
         run: |
           cd aks_deploy
           terraform apply -no-color  -auto-approve -var-file='./aksConfig.tfvars'
+      - name: Terraform  destroy
+        run: |
+          cd aks_deploy
+          terraform destroy -no-color  -auto-approve -var-file='./aksConfig.tfvars'
