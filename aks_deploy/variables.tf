@@ -43,11 +43,6 @@ variable "numNodes" {
   type        = number
 }
 
-variable "subnet_id" {
-  description = "ID de la subred en la que se creará el clúster AKS"
-  type        = string
-}
-
 variable "disk_size_gb" {
   description = "Tamaño del disco OS de la máquina virtual para el clúster AKS"
   type        = number
