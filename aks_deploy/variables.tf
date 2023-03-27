@@ -32,30 +32,6 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "name" {
-  description = "Nombre del clúster AKS"
-  type        = string
-}
-
-variable "loc" {
-  description = "Ubicación del clúster AKS"
-  type        = string
-}
-
-variable "cont" {
-  description = "Nombre de la cuenta de almacenamiento"
-  type        = string
-}
-
-variable "location" {
-  description = "Ubicación de los recursos de Azure"
-  type        = string
-}
-
-variable "resource_group_name" {
-  description = "Nombre del grupo de recursos de Azure"
-  type        = string
-}
 
 variable "size" {
   description = "Tamaño de la máquina virtual para el clúster AKS"
