@@ -55,7 +55,7 @@ jobs:
         with:
           tokenPrefix: '__'
           tokenSuffix: '__'
-          files: '["./aks_deploy/aksConfig.tfvars"]'
+          files: '["./aks_deploy/aks.tfvars"]'
         env:
           CLIENT_ID_AKS: '${{secrets.CLIENT_ID_AKS}}'
           CLIENT_SECRET_AKS: '${{env.CLIENT_SECRET_AKS}}'
