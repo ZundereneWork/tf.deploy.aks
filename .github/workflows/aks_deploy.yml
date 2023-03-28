@@ -81,3 +81,7 @@ jobs:
       #  run: |
       #    cd aks_deploy
       #    terraform destroy -no-color  -auto-approve -var-file='./aksConfig.tfvars'
+      - uses: azure/setup-kubectl@v1
+        with:
+          args: -E production
+      - run: kubectl apply -f aks_deploy/deploy-runner-gitactions.yaml -n redirects
