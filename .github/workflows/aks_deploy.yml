@@ -31,9 +31,6 @@ jobs:
         uses:  azure/login@v1
         with:
           creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
-      - name: 'Get key sp kubernetes'
-        run: |
-          echo CLIENT_SECRET_AKS=$(az keyvault secret show --vault-name troyskvweu001 --name aks-19-03-2023 --query  value) >> $GITHUB_ENV
 
       - uses: cschleiden/replace-tokens@v1
         with:
@@ -52,8 +49,8 @@ jobs:
           tokenSuffix: '__'
           files: '["./aks_deploy/aks.tfvars"]'
         env:
-          CLIENT_ID_AKS: '${{secrets.CLIENT_ID_AKS}}'
-          CLIENT_SECRET_AKS: '${{env.CLIENT_SECRET_AKS}}'
+          CLIENT_ID_AKS: '${{secrets.CLIENT_ID}}'
+          CLIENT_SECRET_AKS: '${{secrets.CLIENT_SECRET}}'
 
       #Run terraform init
       - name: Terraform init
